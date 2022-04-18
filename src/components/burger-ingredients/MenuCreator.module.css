@@ -1,0 +1,31 @@
+.menuBox {
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    /*border: 1px solid white;*/
+}
+.itemBox {
+    position: relative;
+    width: 272px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*border: 1px solid white;*/
+}
+/*.itemBox * {*/
+/*    border: 1px solid white;*/
+/*}*/
+.priseBox {
+    display: flex;
+}
+.priseBox * {
+    padding-top: 0;
+    margin: 0;
+}
+.description {
+    width: 100%;
+    text-align: center;
+    height: 48px;
+}
