@@ -1,0 +1,66 @@
+.mainContainer {
+    display: flex;
+    width: 600px;
+    height: 912px;
+    flex-direction: column;
+    align-items: end;
+    gap: 16px;
+}
+.ingredientCont {
+    width: 568px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+}
+.receptList {
+    width: 568px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rowBox {
+    display: flex;
+    height: min-content;
+    justify-content: end;
+}
+.totalPrice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 64px;
+}
+.totalPrice p {
+    line-height: 36px;
+    font-size: 48px;
+
+}
+.totalPrice div {
+    width: 33px;
+    height: 33px;
+}
+.totalPrice div * {
+    width: 100%;
+    height: 100%;
+}
+
+
+.scrolling {
+    max-height: 464px;
+    overflow-y:  scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.scrolling::-webkit-scrollbar {
+    width: 8px;
+}
+.scrolling::-webkit-scrollbar-track {
+    background: #2F2F37;
+}
+.scrolling::-webkit-scrollbar-thumb {
+    background: #8585AD;
+}

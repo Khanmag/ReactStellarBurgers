@@ -1,0 +1,39 @@
+.constructor {
+    /*border: 1px solid white;*/
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.constructor div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.constructor p {
+    line-height: 24px;
+    font-size: 16px;
+}
+header {
+    height: 88px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: grey;
+}
+nav {
+    width: 1280px;
+    display: flex;
+    position: relative;
+}
+.left {
+    position: absolute;
+    right: 0;
+}
+.logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
