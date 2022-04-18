@@ -54,6 +54,7 @@ class BurgerConstructor extends React.Component <any, any> {
                             <CurrencyIcon type="primary"/>
                         </div>
                     </div>
+
                     <div className={'ml-10'}>
                         <Button type="primary" size="large">
                             Оформить заказ

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/stellar-burgers.iml" filepath="$PROJECT_DIR$/.idea/stellar-burgers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/react-burger.iml" filepath="$PROJECT_DIR$/.idea/react-burger.iml" />
     </modules>
   </component>
 </project>
