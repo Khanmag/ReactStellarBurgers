@@ -1,7 +1,7 @@
 import React from "react";
 import {} from "@ya.praktikum/react-developer-burger-ui-components";
-import BurgerIngredients from "./components/burger-ingredients/BurgerIngredients";
-import BurgerConstructor from "./components/burgerConstructor/BurgerConstructor";
+import BurgerIngredients from "../burgerIngredients/BurgerIngredients";
+import BurgerConstructor from "../burgerConstructor/BurgerConstructor";
 
 class MainContainer extends React.Component <any, any> {
     constructor(props: any) {

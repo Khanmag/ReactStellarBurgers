@@ -5,15 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27fb5e19-90e7-4596-8cbe-ee86149061b6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/stellar-burgers.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/app-header/App-header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app-header/App-header.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/burgerConstructor/BurgerConstructor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/burgerConstructor/BurgerConstructor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppMain/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppMain/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main-container.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppMain/Main-container.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app-header/App-header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/appHeader/AppHeader.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app-header/App-header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/appHeader/AppHeader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/burger-ingredients/BurgerIngredient.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/burgerIngredients/BurgerIngredients.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/burger-ingredients/BurgerIngredients.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/burgerIngredients/BurgerIngredients.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/burger-ingredients/MenuCreator.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/burgerIngredients/MenuCreator.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/burger-ingredients/MenuCreator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/burgerIngredients/MenuCreator.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/burger-ingredients/MyTab.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/burgerIngredients/MyTab.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/burgerConstructor/BurgerConstructor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/burgerConstructor/BurgerConstructor.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/data.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +31,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/jsonSchemas/.eslintrc-schema.json" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -40,8 +52,17 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editor.reader.mode" />
     <property name="ts.external.directory.path" value="E:\YandexPracticum\stellar-burgers\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="ReaderModeSettings">
+    <option name="enabled" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\YandexPracticum\stellar-burgers\src\components\AppMain" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -52,11 +73,25 @@
       <option name="presentableId" value="Default" />
       <updated>1650277449900</updated>
       <workItem from="1650277451972" duration="22000" />
-      <workItem from="1650277565115" duration="1432000" />
+      <workItem from="1650277565115" duration="4813000" />
+      <workItem from="1650294174089" duration="173000" />
+      <workItem from="1650294373034" duration="1278000" />
+      <workItem from="1650373652056" duration="2260000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

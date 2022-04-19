@@ -1,5 +1,5 @@
 import React from "react";
-import st from './BurgerIngredient.module.css'
+import st from './BurgerIngredients.module.css'
 import MyTab from "./MyTab";
 import MenuCreator from "./MenuCreator";
 
