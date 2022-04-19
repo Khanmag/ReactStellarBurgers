@@ -3,7 +3,7 @@ import {ConstructorElement, CurrencyIcon, Button, DragIcon} from "@ya.praktikum/
 import st from './BurgerConstructor.module.css'
 
 
-class BurgerConstructor extends React.Component <any, any> {
+class BurgerConstructor extends React.Component {
     render() {
         let recept = this.props.recept
         let bun = this.props.bun
@@ -20,13 +20,12 @@ class BurgerConstructor extends React.Component <any, any> {
                 </div>
 
                 <div className={st.scrolling}>
-                    {recept.map((item: any) => (
-                        <div className={`${st.receptList} ml-4 mr-2 `}>
+                    {recept.map((item, index) => (
+                        <div key={item._id + index} className={`${st.receptList} ml-4 mr-2 `}>
                             <div style={{width: '24', height: '24'}}>
                                 <DragIcon type="primary"/>
                             </div>
                             <ConstructorElement
-                                key={Math.floor(Math.random() * 10000000)}
                                 isLocked={false}
                                 text={item.name}
                                 price={item.price}
@@ -54,6 +53,7 @@ class BurgerConstructor extends React.Component <any, any> {
                             <CurrencyIcon type="primary"/>
                         </div>
                     </div>
+
                     <div className={'ml-10'}>
                         <Button type="primary" size="large">
                             Оформить заказ
