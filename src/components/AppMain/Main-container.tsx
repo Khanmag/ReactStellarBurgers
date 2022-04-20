@@ -2,11 +2,14 @@ import React from "react";
 import {} from "@ya.praktikum/react-developer-burger-ui-components";
 import BurgerIngredients from "../burgerIngredients/BurgerIngredients";
 import BurgerConstructor from "../burgerConstructor/BurgerConstructor";
+import ReactDOM from "react-dom/client";
+import Modal from "../modal/OrderingModal";
 
 class MainContainer extends React.Component <any, any> {
     constructor(props: any) {
         super(props);
         this.state = {
+            showOrderModal: false,
             recept: [this.props.data[5], this.props.data[4], this.props.data[7], this.props.data[8], this.props.data[8]],
             totalPrice: 2510,
             data: this.props.data.map((item:any) => {
@@ -45,6 +48,11 @@ class MainContainer extends React.Component <any, any> {
             return item
         })})
     }
+
+    toggleOrderModal = () => {
+        this.setState({...this.state, showOrderModal: !this.state.showOrderModal})
+    }
+
     componentWillMount() {
         this.addIngredient({...this.state.data[5]})
         this.addIngredient({...this.state.data[4]})
@@ -64,10 +72,12 @@ class MainContainer extends React.Component <any, any> {
 
                 <BurgerIngredients data={this.state.data} addIngredient={this.addIngredient} changeBun={this.changeBun} />
 
-                <BurgerConstructor recept={this.state.recept} bun={this.state.bun}
+                <BurgerConstructor recept={this.state.recept} bun={this.state.bun} showOrderModal={this.toggleOrderModal}
                                    totalPrice={totalPrice} handleClose={this.handleClose}/>
+                <Modal isOpen={this.state.showOrderModal} closeModal={this.toggleOrderModal}/>
             </main>
         )
     }
 }
 export default MainContainer
+

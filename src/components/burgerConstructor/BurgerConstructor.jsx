@@ -55,7 +55,7 @@ class BurgerConstructor extends React.Component {
                     </div>
 
                     <div className={'ml-10'}>
-                        <Button type="primary" size="large">
+                        <Button onClick={this.props.showOrderModal} type="primary" size="large">
                             Оформить заказ
                         </Button>
                     </div>
