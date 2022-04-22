@@ -2,13 +2,13 @@ import style from "./Modal.module.css";
 import React from "react";
 import PropTypes from "prop-types";
 
-const ModalOverlay = ({children, ...props}) => {
+const ModalOverlay = ({children, closeModal}) => {
     const overflowZone = React.useRef(null)
     const closeWhenClickOnOverflow = (e) => {
-        if (overflowZone.current === e.target) props.closeModal()
+        if (overflowZone.current === e.target) closeModal()
     }
     const closeWhenPressEscape = (e) => {
-        if (e.code === 'Escape') props.closeModal()
+        if (e.code === 'Escape') closeModal()
     }
 
     React.useEffect(() => {
@@ -20,15 +20,15 @@ const ModalOverlay = ({children, ...props}) => {
         }
     }, [])
 
-    return <>
-            <div ref={overflowZone}  className={style.overlay}>
-                {children}
-            </div>
-        </>
+    return (
+        <div ref={overflowZone} className={style.overlay}>
+            {children}
+        </div>
+    )
 }
 
 export default ModalOverlay
 
 ModalOverlay.propTypes = {
-    closeModal: PropTypes.func
+    closeModal: PropTypes.func.isRequired
 }

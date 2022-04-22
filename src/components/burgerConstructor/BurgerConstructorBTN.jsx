@@ -13,6 +13,6 @@ const BurgerConstructorBTN = ({onClickFunc}) => {
     )
 }
 BurgerConstructorBTN.protoTypes = {
-    showOrderModal: PropTypes.func
+    showOrderModal: PropTypes.func.isRequired
 }
 export default BurgerConstructorBTN

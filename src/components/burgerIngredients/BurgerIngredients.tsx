@@ -1,5 +1,5 @@
 import React from "react";
-import st from './BurgerIngredients.module.css'
+import style from './BurgerIngredients.module.css'
 import MyTab from "./MyTab";
 import MenuCreator from "./MenuCreator";
 import PropTypes from "prop-types";
@@ -13,10 +13,10 @@ const BurgerIngredients = ({data, openIngredientModal, recipe}: { data: any, ope
     const sauce = data.filter((item: { type: string; }) => item.type === 'sauce')
 
     return (
-        <div className={`${st.container} pb-10`}>
-            <h1 className={`${st.title} mt-10 mb-5 text text_type_main-large`}>Соберите бургер</h1>
+        <div className={`${style.container} pb-10`}>
+            <h1 className={`${style.title} mt-10 mb-5 text text_type_main-large`}>Соберите бургер</h1>
             <MyTab/>
-            <div className={`${st.scrolling} mt-10`}>
+            <div className={`${style.scrolling} mt-10`}>
                 <MenuCreator data={bun} title={'Булки'} clickFunc={openIngredientModal} recipe={recipe}/>
                 <MenuCreator data={sauce} title={'Соусы'} clickFunc={openIngredientModal} recipe={recipe}/>
                 <MenuCreator data={main} title={'Начинки'} clickFunc={openIngredientModal} recipe={recipe}/>
@@ -28,8 +28,8 @@ const BurgerIngredients = ({data, openIngredientModal, recipe}: { data: any, ope
 const menuItemPropTypes = PropTypes.shape({...propTypesObj});
 BurgerIngredients.propTypes = {
     data: PropTypes.arrayOf(menuItemPropTypes.isRequired).isRequired,
-    openIngredientModal: PropTypes.func,
-    recipe: PropTypes.arrayOf(menuItemPropTypes)
+    openIngredientModal: PropTypes.func.isRequired,
+    recipe: PropTypes.arrayOf(menuItemPropTypes.isRequired).isRequired
 }
 export default BurgerIngredients
 

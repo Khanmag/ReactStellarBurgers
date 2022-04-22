@@ -43,6 +43,10 @@
     display: flex;
     justify-content: center;
 }
+.centralText {
+    width: 520px;
+    text-align: center;
+}
 .structureBlock {
     width: 520px;
     display: flex;

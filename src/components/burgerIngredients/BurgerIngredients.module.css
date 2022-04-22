@@ -16,3 +16,6 @@
 .scrolling::-webkit-scrollbar-thumb {
     background: #8585AD;
 }
+.tabBlock {
+    display: flex;
+}
