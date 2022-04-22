@@ -1,4 +1,4 @@
-import {useState, useEffect} from "react";
+import {useState} from "react";
 import BurgerIngredients from "../burgerIngredients/BurgerIngredients";
 import BurgerConstructor from "../burgerConstructor/BurgerConstructor";
 import PropTypes from "prop-types";
@@ -7,6 +7,7 @@ import OrderDetails from "../modal/OrderDetails";
 import IngredientDetails from "../modal/IngredientDetails";
 import style from './App.module.css'
 import Modal from '../modal/Modal'
+
 
 const MainContainer = ({data}: { data: any }) => {
     const [state, setState] = useState({
