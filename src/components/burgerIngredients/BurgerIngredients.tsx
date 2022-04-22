@@ -1,4 +1,3 @@
-import React from "react";
 import style from './BurgerIngredients.module.css'
 import MyTab from "./MyTab";
 import MenuCreator from "./MenuCreator";
