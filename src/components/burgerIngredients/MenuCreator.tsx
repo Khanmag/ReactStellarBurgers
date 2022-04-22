@@ -45,7 +45,6 @@ const CreateMenuElement = (item: any, clickFunc: any, recipe: any) => {
         </>
     )
 }
-
 CreateMenuElement.propTypes = {
     item: menuItemPropTypes.isRequired,
     clickFunc: PropTypes.func.isRequired,
