@@ -6,22 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="54574784-e8a1-45af-8acf-157e182e4ead" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/appHeader/AppHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/appHeader/AppHeader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/appMain/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/appMain/App.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/appMain/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/appMain/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/appMain/MainContainer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/appMain/MainContainer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/burgerConstructor/BurgerConstructor.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/burgerConstructor/BurgerConstructor.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/burgerConstructor/BurgerConstructor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/burgerConstructor/BurgerConstructor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/burgerConstructor/BurgerConstructorBTN.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/burgerConstructor/BurgerConstructorBTN.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/burgerIngredients/BurgerIngredients.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/burgerIngredients/BurgerIngredients.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/burgerIngredients/BurgerIngredients.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/burgerIngredients/BurgerIngredients.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/burgerIngredients/MenuCreator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/burgerIngredients/MenuCreator.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/burgerIngredients/MyTab.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/burgerIngredients/MyTab.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/modal/IngredientDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/modal/IngredientDetails.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/modal/Modal.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/modal/Modal.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/modal/Modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/modal/Modal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/modal/ModalOverlay.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/modal/ModalOverlay.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/modal/OrderDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/modal/OrderDetails.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +49,7 @@
       <option name="presentableId" value="Default" />
       <updated>1650516370302</updated>
       <workItem from="1650516373291" duration="14913000" />
-      <workItem from="1650604496173" duration="26230000" />
+      <workItem from="1650604496173" duration="26936000" />
     </task>
     <servers />
   </component>

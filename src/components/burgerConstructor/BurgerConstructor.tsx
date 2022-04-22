@@ -27,7 +27,7 @@ const BurgerConstructor = ({recipe, showOrderModal, handleClose}
             <div className={style.scrolling}>
                 {ingredients.map((item:any, index:any) => (
                     <div key={item._id + index} className={`${style.recipeList} ml-4 mr-2 `}>
-                        <div style={{width: '24', height: '24'}}>
+                        <div className={style.iconContainer}>
                             <DragIcon type="primary"/>
                         </div>
                         <ConstructorElement
