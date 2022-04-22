@@ -1,6 +1,6 @@
 import React from 'react';
 // import data from "../../utils/data";
-import './App.css';
+import style from './App.module.css';
 import {ConstructorElement} from '@ya.praktikum/react-developer-burger-ui-components'
 import AppHeader from "../appHeader/AppHeader";
 import MainContainer from "./MainContainer";
@@ -14,6 +14,7 @@ const App = () => {
     const [state, setState] = React.useState({
         isLoading: true,
         hasError: false,
+        errorName: '',
         data: [],
     });
 
@@ -22,18 +23,18 @@ const App = () => {
 
         const getIngredientData = async () => {
             const res = await fetch(mainURL);
-            const data = await res.json();
-            if (!data.success) {
-                setState({...state, isLoading: false, hasError: true})
-            } else {
-                setState({ ...state, data: data.data, isLoading: false });
+            if (res.ok) {
+                const data = await res.json();
+                setState({...state, isLoading: false, hasError: false, data: data.data})
             }
         }
-        getIngredientData();
+        getIngredientData().catch(err => {
+            setState({...state, errorName: err, hasError: true, isLoading: false})
+        });
     }, [])
 
     if (state.isLoading) return <p>Загрузка...</p>
-    else if (state.hasError) return <p>Произошла ошибка, пожалуйста попробуйте снова</p>
+    else if (state.hasError) return <p>Произошла ошибка {state.errorName}, пожалуйста попробуйте снова</p>
 
     return (
         <>
@@ -41,7 +42,6 @@ const App = () => {
             <MainContainer data={state.data}/>
         </>
     )
-
 }
 
 

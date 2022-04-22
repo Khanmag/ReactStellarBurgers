@@ -5,9 +5,10 @@ import PropTypes from "prop-types";
 import propTypesObj from "../../utils/propTypesObj";
 import OrderDetails from "../modal/OrderDetails";
 import IngredientDetails from "../modal/IngredientDetails";
+import style from './App.module.css'
+import Modal from '../modal/Modal'
 
-const MainContainer = ({data}:{data:any}) => {
-    // console.log(data)
+const MainContainer = ({data}: { data: any }) => {
     const [state, setState] = useState({
         showOrderModal: false,
         showIngredientModal: false,
@@ -17,7 +18,7 @@ const MainContainer = ({data}:{data:any}) => {
     })
 
 
-    function openIngredientModal(item:object) {
+    function openIngredientModal(item: object) {
         setState({...state, showIngredientModal: true, currentItemForModal: item})
     }
 
@@ -28,28 +29,25 @@ const MainContainer = ({data}:{data:any}) => {
         setState({...state, showIngredientModal: !state.showIngredientModal})
     }
 
-    useEffect(() => {
-    }, [])
-
     return (
-        <main style={{
-            display: 'flex', width: '100%', gap: '40px',
-            flexDirection: 'row', alignItems: 'start', justifyContent: 'center',
-        }}>
+        <main className={style.mainContainer}>
 
             <BurgerIngredients data={data} openIngredientModal={openIngredientModal} recipe={state.recipe}/>
 
-            <BurgerConstructor recipe={state.recipe} showOrderModal={toggleOrderModal} handleClose={() => {}}/>
+            <BurgerConstructor recipe={state.recipe} showOrderModal={toggleOrderModal} handleClose={() => {
+            }}/>
 
-            {state.showOrderModal ? <OrderDetails closeModal={toggleOrderModal}/> : null}
-            {state.showIngredientModal ? <IngredientDetails item={state.currentItemForModal}
-                                                            closeModal={toggleIngredientModal}/> : null}
+            {state.showOrderModal ? <Modal closeModal={toggleOrderModal} title={''}>
+                <OrderDetails/></Modal> : null}
+
+            {state.showIngredientModal ? <Modal closeModal={toggleIngredientModal} title={'Детали ингредиента'}>
+                <IngredientDetails item={state.currentItemForModal}/></Modal> : null}
         </main>
     )
 }
 
 MainContainer.propTypes = {
-    data: PropTypes.arrayOf(PropTypes.shape(propTypesObj)),
+    data: PropTypes.arrayOf(PropTypes.shape(propTypesObj).isRequired).isRequired,
 }
 
 export default MainContainer

@@ -1,8 +1,7 @@
-import {Button, ConstructorElement, CurrencyIcon, DragIcon} from "@ya.praktikum/react-developer-burger-ui-components";
-import st from './BurgerConstructor.module.css'
+import {ConstructorElement, CurrencyIcon, DragIcon} from "@ya.praktikum/react-developer-burger-ui-components";
+import style from './BurgerConstructor.module.css'
 import PropTypes from "prop-types";
 import propTypesObj from "../../utils/propTypesObj";
-// import BurgerConstructorBTN from "./BurgerConstructorBTN";
 import React from "react";
 import BurgerConstructorBTN from "./BurgerConstructorBTN";
 
@@ -14,8 +13,8 @@ const BurgerConstructor = ({recipe, showOrderModal, handleClose}
     const ingredients = recipe.filter((item:any) => item.type !== 'bun')
     const totalPrice = recipe.map((i:any) => i.price).reduce((a:number, b:number) => a+b)
     return (
-        <div className={`${st.mainContainer}`}>
-            <div className={`${st.ingredientCont} mt-25 ml-4 mr-4`}>
+        <div className={`${style.mainContainer}`}>
+            <div className={`${style.ingredientCont} mt-25 ml-4 mr-4`}>
                 <ConstructorElement
                     type="top"
                     isLocked={true}
@@ -25,10 +24,10 @@ const BurgerConstructor = ({recipe, showOrderModal, handleClose}
                 />
             </div>
 
-            <div className={st.scrolling}>
+            <div className={style.scrolling}>
                 {ingredients.map((item:any, index:any) => (
-                    <div key={item._id + index} className={`${st.recipeList} ml-4 mr-2 `}>
-                        <div style={{width: '24', height: '24'}}>
+                    <div key={item._id + index} className={`${style.recipeList} ml-4 mr-2 `}>
+                        <div className={style.iconContainer}>
                             <DragIcon type="primary"/>
                         </div>
                         <ConstructorElement
@@ -42,7 +41,7 @@ const BurgerConstructor = ({recipe, showOrderModal, handleClose}
                 ))}
             </div>
 
-            <div className={`${st.ingredientCont} ml-4 mr-4`}>
+            <div className={`${style.ingredientCont} ml-4 mr-4`}>
                 <ConstructorElement
                     type="bottom"
                     isLocked={true}
@@ -52,8 +51,8 @@ const BurgerConstructor = ({recipe, showOrderModal, handleClose}
                 />
             </div>
 
-            <div className={`${st.rowBox} ml-4 mr-4 mt-6`}>
-                <div className={`${st.totalPrice}`}>
+            <div className={`${style.rowBox} ml-4 mr-4 mt-6`}>
+                <div className={`${style.totalPrice}`}>
                     <p className={'text text_type_digits-medium'}>{totalPrice}</p>
                     <div className={'pl-1'}>
                         <CurrencyIcon type="primary"/>
@@ -68,9 +67,9 @@ const BurgerConstructor = ({recipe, showOrderModal, handleClose}
 }
 
 BurgerConstructor.propTypes = {
-    recipe: PropTypes.arrayOf(PropTypes.shape(propTypesObj)),
-    showOrderModal: PropTypes.func,
-    handleClose: PropTypes.func,
+    recipe: PropTypes.arrayOf(PropTypes.shape(propTypesObj).isRequired).isRequired,
+    showOrderModal: PropTypes.func.isRequired,
+    handleClose: PropTypes.func.isRequired,
 }
 
 export default BurgerConstructor

@@ -3,7 +3,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    /*border: 1px solid white;*/
 }
 .itemBox {
     position: relative;
@@ -12,11 +11,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /*border: 1px solid white;*/
 }
-/*.itemBox * {*/
-/*    border: 1px solid white;*/
-/*}*/
 .priseBox {
     display: flex;
 }
