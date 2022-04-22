@@ -1,10 +1,6 @@
 import React from 'react';
-// import data from "../../utils/data";
-import style from './App.module.css';
-import {ConstructorElement} from '@ya.praktikum/react-developer-burger-ui-components'
 import AppHeader from "../appHeader/AppHeader";
 import MainContainer from "./MainContainer";
-import PropTypes from "prop-types";
 
 const mainURL = 'https://norma.nomoreparties.space/api/ingredients'
 

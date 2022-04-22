@@ -1,6 +1,7 @@
 import style from "./Modal.module.css";
 import imageIcon from "../../image/graphics.svg";
 
+
 const OrderDetails  = () => {
     return (
         <>
