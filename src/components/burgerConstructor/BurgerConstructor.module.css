@@ -13,14 +13,17 @@
     justify-content: end;
 
 }
-.receptList {
+.recipeList {
     width: 568px;
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-
+.iconContainer {
+    width: 24px;
+    height: 24px;
+}
 .rowBox {
     display: flex;
     height: min-content;
