@@ -2,16 +2,20 @@ import {ConstructorElement, CurrencyIcon, DragIcon} from "@ya.praktikum/react-de
 import style from './BurgerConstructor.module.css'
 import PropTypes from "prop-types";
 import propTypesObj from "../../utils/propTypesObj";
-import React from "react";
+import React, {useContext} from "react";
 import BurgerConstructorBTN from "./BurgerConstructorBTN";
+import {BurgerConstructorContext} from "../../utils/BurgerConstructorContext";
+
+// oldProps = {recipe, showOrderModal, handleClose}
+//                 :{recipe: any, showOrderModal: any, handleClose: any}
 
 
-const BurgerConstructor = ({recipe, showOrderModal, handleClose}
-                               :{recipe: any, showOrderModal: any, handleClose: any}) => {
+const BurgerConstructor = () => {
+    // @ts-ignore
+    const { recipe, bun, toggleOrderModal} = useContext(BurgerConstructorContext)
 
-    const bun = recipe.find((item:any) => item.type === 'bun')
-    const ingredients = recipe.filter((item:any) => item.type !== 'bun')
-    const totalPrice = recipe.map((i:any) => i.price).reduce((a:number, b:number) => a+b)
+    const totalPrice = recipe.map((i:any) => i.price).reduce((a:number, b:number) => a+b) + (2 * bun.price)
+
     return (
         <div className={`${style.mainContainer}`}>
             <div className={`${style.ingredientCont} mt-25 ml-4 mr-4`}>
@@ -25,7 +29,7 @@ const BurgerConstructor = ({recipe, showOrderModal, handleClose}
             </div>
 
             <div className={style.scrolling}>
-                {ingredients.map((item:any, index:any) => (
+                {recipe.map((item:any, index:any) => (
                     <div key={item._id + index} className={`${style.recipeList} ml-4 mr-2 `}>
                         <div className={style.iconContainer}>
                             <DragIcon type="primary"/>
@@ -35,7 +39,7 @@ const BurgerConstructor = ({recipe, showOrderModal, handleClose}
                             text={item.name}
                             price={item.price}
                             thumbnail={item.image}
-                            handleClose={() => handleClose(item)}
+                            handleClose={() => {}}
                         />
                     </div>
                 ))}
@@ -59,17 +63,17 @@ const BurgerConstructor = ({recipe, showOrderModal, handleClose}
                     </div>
                 </div>
 
-                <BurgerConstructorBTN onClickFunc={showOrderModal}/>
+                <BurgerConstructorBTN onClickFunc={toggleOrderModal}/>
             </div>
 
         </div>
     )
 }
 
-BurgerConstructor.propTypes = {
-    recipe: PropTypes.arrayOf(PropTypes.shape(propTypesObj).isRequired).isRequired,
-    showOrderModal: PropTypes.func.isRequired,
-    handleClose: PropTypes.func.isRequired,
-}
+// BurgerConstructor.propTypes = {
+//     recipe: PropTypes.arrayOf(PropTypes.shape(propTypesObj).isRequired).isRequired,
+//     showOrderModal: PropTypes.func.isRequired,
+//     handleClose: PropTypes.func.isRequired,
+// }
 
 export default BurgerConstructor
