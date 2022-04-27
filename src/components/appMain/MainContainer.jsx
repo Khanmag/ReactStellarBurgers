@@ -16,7 +16,7 @@ const MainContainer = ({data}) => {
         currentItemForModal: data[5],
         recipe: [data[5], data[4], data[7], data[8], data[8]],
         bun: data[0],
-        orderNum: 0,
+        orderNum: null,
     })
 
 
@@ -30,39 +30,43 @@ const MainContainer = ({data}) => {
         if (!state.showOrderModal) {
             const postBody = state.recipe.map(item => item._id)
             fetch('https://norma.nomoreparties.space/api/orders', {
-                         method: 'POST',
-                         headers: {'Content-Type': 'application/json;charset=utf-8'},
-                         body: JSON.stringify({'ingredients': postBody})
-                     }).then(response => response.json())
+                method: 'POST',
+                headers: {'Content-Type': 'application/json;charset=utf-8'},
+                body: JSON.stringify({'ingredients': postBody})
+            })
+                .then(response => {
+                    if (response.ok) return response.json()
+                    setState({...state, showOrderModal: !state.showOrderModal, orderNum: null})
+                    return Promise.reject(response.status)
+                })
                 .then(result => {
                     setState({...state, showOrderModal: !state.showOrderModal, orderNum: result.order.number})
                 })
                 .catch(err => {
                     console.log(err)
                 })
-        }
-        else setState({...state, showOrderModal: !state.showOrderModal})
+        } else setState({...state, showOrderModal: !state.showOrderModal})
     }
 
 
-    return (
-        <main className={style.mainContainer}>
-            <BurgerConstructorContext.Provider value={{recipe: state.recipe, bun: state.bun, toggleOrderModal}}>
+    return (<main className={style.mainContainer}>
 
-                <BurgerIngredients data={data} openIngredientModal={openIngredientModal} recipe={state.recipe}/>
+            <BurgerIngredients data={data} openIngredientModal={openIngredientModal} recipe={state.recipe}/>
+
+            {state.showIngredientModal ? <Modal closeModal={closeIngredientModal} title={'Детали ингредиента'}>
+                <IngredientDetails item={state.currentItemForModal}/></Modal> : null}
+
+            <BurgerConstructorContext.Provider value={{recipe: state.recipe, bun: state.bun,
+                orderNum: state.orderNum, toggleOrderModal}}>
 
                 {/*<BurgerConstructor recipe={state.recipe} showOrderModal={toggleOrderModal} handleClose={() => {}}/>*/}
                 <BurgerConstructor/>
 
                 {state.showOrderModal ? <Modal closeModal={toggleOrderModal} title={''}>
-                    <OrderDetails orderNum={state.orderNum}/></Modal> : null}
-
-                {state.showIngredientModal ? <Modal closeModal={closeIngredientModal} title={'Детали ингредиента'}>
-                    <IngredientDetails item={state.currentItemForModal}/></Modal> : null}
+                    <OrderDetails/></Modal> : null}
 
             </BurgerConstructorContext.Provider>
-        </main>
-    )
+        </main>)
 }
 
 MainContainer.propTypes = {
