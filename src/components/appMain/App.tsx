@@ -18,6 +18,7 @@ const App = () => {
         fetch(mainURL)
             .then(response => {
                 if (response.ok) return response.json()
+                return Promise.reject(response.status)
             })
             .then( data => {
                 setState({...state, isLoading: false, hasError: false, data: data.data})

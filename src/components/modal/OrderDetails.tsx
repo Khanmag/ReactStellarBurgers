@@ -1,8 +1,13 @@
 import style from "./Modal.module.css";
 import imageIcon from "../../image/graphics.svg";
+import {useContext} from "react";
+import {BurgerConstructorContext} from "../../utils/BurgerConstructorContext";
 
 // @ts-ignore
-const OrderDetails  = ({orderNum}) => {
+const OrderDetails  = () => {
+
+    // @ts-ignore
+    const {orderNum} = useContext(BurgerConstructorContext)
     if (!orderNum) {
         return (
             <p className="mt-30 mb-30 text text_type_main-medium">Произошла ошибка, пожалуйста попробуйте еще раз</p>
